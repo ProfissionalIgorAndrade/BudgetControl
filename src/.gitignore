@@ -43,7 +43,6 @@ project.assets.json
 ReSharper/
 
 # Docker
-**/Dockerfile
 **/docker-compose*
 
 # Arquivos temporários
@@ -63,7 +62,7 @@ npm-debug.log
 yarn.lock
 
 # Ambiente do Render
-render.yaml
+# render.yaml
 .env
 .env.local
 .env.development
