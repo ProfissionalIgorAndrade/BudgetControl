@@ -6,8 +6,7 @@ public class WeatherForecastService
 {
     private readonly string[] _summaries =
     {
-        "Igor", "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm",
-        "Balmy", "Hot", "Sweltering", "Scorching", "Andreza", "Iago"
+        "Macarrão", "Arroz", "Feijão", "Bife", "Lentilha"
     };
 
     public IEnumerable<WeatherForecast> GetForecast()
