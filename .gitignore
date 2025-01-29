@@ -1,0 +1,62 @@
+# Binários compilados
+bin/
+obj/
+out/
+
+# Logs e arquivos de depuração
+*.log
+*.tlog
+*.pdb
+
+# Configurações de usuário e arquivos temporários
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.ntvs*
+*.njsproj
+*.sln.docstates
+
+# Pacotes NuGet e dependências geradas
+*.nupkg
+packages/
+.nuget/
+
+# Cache do Rider e Resharper
+*.DotSettings.user
+**/RiderLogging/
+
+# Configurações específicas do Visual Studio
+*.csproj.user
+*.dbmdl
+*.jfm
+.env
+
+# Configurações de build
+project.lock.json
+project.assets.json
+.DS_Store
+Thumbs.db
+
+# Certificados gerados
+*.pfx
+*.snk
+
+# Configurações do Docker
+docker-compose.override.yml
+
+# Configurações do Secrets do ASP.NET
+secrets.json
+
+# Cobertura de testes e relatórios
+TestResults/
+*.coverage
+*.coveragexml
+*.code-workspace
+
+# Arquivos gerados pelo Entity Framework
+Migrations/
+
+# Node.js (se usar frontend com Angular/React)
+node_modules/
