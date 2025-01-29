@@ -1,0 +1,69 @@
+# Compilação e dependências
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.nuget
+*.snupkg
+*.nupkg
+*.log
+*.cache
+
+# Configuração do usuário
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs e Debug
+logs/
+*.log
+debug/
+
+# Dados Sensíveis
+secrets.json
+appsettings.Development.json
+appsettings.Local.json
+
+# Pacotes do NuGet
+packages/
+project.lock.json
+project.assets.json
+
+# Arquivos do Rider e Visual Studio
+*.csproj.user
+*.dbmdl
+*.dotCover
+*.sln.docstates
+*.ncrunch*
+*.vscode/
+ReSharper/
+
+# Docker
+**/Dockerfile
+**/docker-compose*
+
+# Arquivos temporários
+*.swp
+*.bak
+*.tmp
+*.pid
+
+# Diretórios do Teste
+TestResults/
+.coverage
+coverage/
+
+# Node.js (caso use frontend no mesmo repo)
+node_modules/
+npm-debug.log
+yarn.lock
+
+# Ambiente do Render
+render.yaml
+.env
+.env.local
+.env.development
