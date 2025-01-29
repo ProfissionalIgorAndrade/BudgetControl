@@ -1,24 +1,31 @@
-# Etapa 1: Build da aplicação (compilar todas as class libs)
+# Etapa 1: Base image
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /src
 
-# Copia o arquivo de solução e restaura dependências
-COPY BudgetControl.sln ./
-COPY src/ ./src/
-RUN dotnet restore
-
-# Compila e publica a aplicação
-RUN dotnet publish src/BudgetControl.Api/BudgetControl.Api.csproj -c Release -o /app/publish
-
-# Etapa 2: Criar imagem final para execução
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+# Defina o diretório de trabalho dentro da imagem Docker
 WORKDIR /app
 
-# Copia os arquivos publicados
-COPY --from=build /app/publish .
+# Copia o arquivo de solução
+COPY BudgetControl.sln ./
 
-# Expõe a porta 8080
-EXPOSE 8080
+# Copia o diretório src e seus arquivos para a imagem
+COPY ./src/ ./src/
 
-# Comando para rodar a API
-CMD ["dotnet", "BudgetControl.Api.dll"]
+# Restaura as dependências
+RUN dotnet restore
+
+# Publica a aplicação
+RUN dotnet publish -c Release -o out
+
+# Etapa 2: Imagem de produção
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+
+WORKDIR /app
+
+# Copia os arquivos publicados da etapa anterior
+COPY --from=build /app/out .
+
+# Defina a porta padrão
+EXPOSE 80
+
+# Executa a aplicação
+ENTRYPOINT ["dotnet", "BudgetControl.Api.dll"]
