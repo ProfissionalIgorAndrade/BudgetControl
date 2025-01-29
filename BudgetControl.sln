@@ -1,8 +1,18 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetControl", "src\BudgetControl.csproj", "{3B26B84A-1817-BC15-E1A9-26CC0DADC50C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AE5EE6CB-B2EE-4B6A-A52C-6D229852BC00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetControl.Api", "src\BudgetControl.Api\BudgetControl.Api.csproj", "{4047C955-0328-40EA-BA19-78FF610B6FB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetControl.Application", "src\BudgetControl.Application\BudgetControl.Application.csproj", "{D24B25AA-5C07-459E-8E6A-31E9B3011D05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetControl.Domain", "src\BudgetControl.Domain\BudgetControl.Domain.csproj", "{617CB4EA-0E69-4404-80A3-B7A0CD8BD1CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetControl.Infrastructure", "src\BudgetControl.Infrastructure\BudgetControl.Infrastructure.csproj", "{DB2E4B00-76A1-48C2-8B7E-492859D6FF3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetControl.Presentation", "src\BudgetControl.Presentation\BudgetControl.Presentation.csproj", "{8F31239A-B0C9-4A46-8451-CCD65F64E485}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,11 +24,38 @@ Global
 		{3B26B84A-1817-BC15-E1A9-26CC0DADC50C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B26B84A-1817-BC15-E1A9-26CC0DADC50C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B26B84A-1817-BC15-E1A9-26CC0DADC50C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4047C955-0328-40EA-BA19-78FF610B6FB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4047C955-0328-40EA-BA19-78FF610B6FB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4047C955-0328-40EA-BA19-78FF610B6FB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4047C955-0328-40EA-BA19-78FF610B6FB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D24B25AA-5C07-459E-8E6A-31E9B3011D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D24B25AA-5C07-459E-8E6A-31E9B3011D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D24B25AA-5C07-459E-8E6A-31E9B3011D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D24B25AA-5C07-459E-8E6A-31E9B3011D05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{617CB4EA-0E69-4404-80A3-B7A0CD8BD1CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{617CB4EA-0E69-4404-80A3-B7A0CD8BD1CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{617CB4EA-0E69-4404-80A3-B7A0CD8BD1CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{617CB4EA-0E69-4404-80A3-B7A0CD8BD1CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB2E4B00-76A1-48C2-8B7E-492859D6FF3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB2E4B00-76A1-48C2-8B7E-492859D6FF3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB2E4B00-76A1-48C2-8B7E-492859D6FF3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB2E4B00-76A1-48C2-8B7E-492859D6FF3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F31239A-B0C9-4A46-8451-CCD65F64E485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F31239A-B0C9-4A46-8451-CCD65F64E485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F31239A-B0C9-4A46-8451-CCD65F64E485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F31239A-B0C9-4A46-8451-CCD65F64E485}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ED892A42-FD10-4AB0-8A39-77871A973D91}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4047C955-0328-40EA-BA19-78FF610B6FB8} = {AE5EE6CB-B2EE-4B6A-A52C-6D229852BC00}
+		{D24B25AA-5C07-459E-8E6A-31E9B3011D05} = {AE5EE6CB-B2EE-4B6A-A52C-6D229852BC00}
+		{617CB4EA-0E69-4404-80A3-B7A0CD8BD1CD} = {AE5EE6CB-B2EE-4B6A-A52C-6D229852BC00}
+		{DB2E4B00-76A1-48C2-8B7E-492859D6FF3A} = {AE5EE6CB-B2EE-4B6A-A52C-6D229852BC00}
+		{8F31239A-B0C9-4A46-8451-CCD65F64E485} = {AE5EE6CB-B2EE-4B6A-A52C-6D229852BC00}
 	EndGlobalSection
 EndGlobal

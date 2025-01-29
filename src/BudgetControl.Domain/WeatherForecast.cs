@@ -1,4 +1,4 @@
-namespace BudgetControl.Models;
+namespace BudgetControl.Domain;
 
 public record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
