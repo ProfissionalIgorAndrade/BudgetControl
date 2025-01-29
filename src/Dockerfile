@@ -1,17 +1,25 @@
-# Usando a imagem oficial do .NET 8
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
-
-# Criando diretório para a aplicação
+# Etapa 1: Build da aplicação
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
-# Copiando os arquivos do projeto para dentro do container
+# Copia todos os arquivos do projeto para dentro do container
 COPY . .
 
-# Publicando a aplicação
-RUN dotnet publish -c Release -o out
+# Restaura as dependências
+RUN dotnet restore
 
-# Definindo a porta padrão
+# Compila e publica a aplicação
+RUN dotnet publish -c Release -o /out
+
+# Etapa 2: Criar imagem final apenas com o runtime do .NET 8
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+WORKDIR /app
+
+# Copia os arquivos publicados na etapa anterior
+COPY --from=build /out .
+
+# Expõe a porta 8080
 EXPOSE 8080
 
-# Definindo o comando de inicialização da API
-CMD ["dotnet", "out/BudgetControl.dll"]
+# Comando para rodar a API
+CMD ["dotnet", "BudgetControl.dll"]
